@@ -5,16 +5,16 @@ using System;
 
 public class Pet : MonoBehaviour
 {
-    public DateTime lastTimeFed, lastTimeHappy, lastTimeEnergized;
-    public int food, happiness, energy;
+    public DateTime lastTimeFed, lastTimeHappy, lastTimeDrinked;
+    public int food, happiness, drink;
 
-    public Pet(DateTime lastTimeFed, DateTime lastTimeHappy, DateTime lastTimeEnergized, int food, int happiness, int energy)
+    public Pet(DateTime lastTimeFed, DateTime lastTimeHappy, DateTime lastTimeDrinked, int food, int happiness, int drink)
     {
         this.lastTimeFed = lastTimeFed;
         this.lastTimeHappy = lastTimeHappy;
-        this.lastTimeEnergized = lastTimeEnergized;
+        this.lastTimeDrinked = lastTimeDrinked;
         this.food = food;
         this.happiness = happiness;
-        this.energy = energy;
+        this.drink = drink;
     }
 }

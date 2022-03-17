@@ -2,35 +2,51 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.IO;
 
 public class PetController : MonoBehaviour
 {
     public int food;
     public int happiness;
-    public int energy;
+    public int drink;
 
     public int foodTickRate;
     public int happinessTickRate;
-    public int energyTickRate;
+    public int drinkTickRate;
 
-    public DateTime lastTimeFed, lastTimeHappy, lastTimeEnergized;
+    public DateTime lastTimeFed, lastTimeHappy, lastTimeDrinked;
 
     public void Awake()
     {
-        Initiziale(100, 100, 100, 2, 1, 1);
+        Initiziale(100, 100, 100, 1, 1, 1);
     }
 
-    public void Initiziale(int food, int happiness, int energy, int foodTickRate, int happinessTickRate, int energyTickRate)
+    public void Initiziale(int food, int happiness, int drink, int foodTickRate, int happinessTickRate, int drinkTickRate)
     {
         lastTimeFed = DateTime.Now;
         lastTimeHappy = DateTime.Now;
-        lastTimeEnergized = DateTime.Now;
+        lastTimeDrinked = DateTime.Now;
         this.food = food;
         this.happiness = happiness;
-        this.energy = energy;
+        this.drink = drink;
         this.foodTickRate = foodTickRate;
         this.happinessTickRate = happinessTickRate;
-        this.energyTickRate = energyTickRate;
+        this.drinkTickRate = drinkTickRate;
+        PetUIController.instance.UpdateImages(food, happiness, drink);
+    }
+
+    public void Initiziale(int food, int happiness, int drink, int foodTickRate, int happinessTickRate, int drinkTickRate, DateTime lastTimeFed, DateTime lastTimeHappy, DateTime lastTimeDrinked)
+    {
+        this.lastTimeFed = lastTimeFed;
+        this.lastTimeHappy = lastTimeHappy;
+        this.lastTimeDrinked = lastTimeDrinked;
+        this.food = food;
+        this.happiness = happiness;
+        this.drink = drink;
+        this.foodTickRate = foodTickRate;
+        this.happinessTickRate = happinessTickRate;
+        this.drinkTickRate = drinkTickRate;
+        PetUIController.instance.UpdateImages(food, happiness, drink);
     }
 
     private void Update()
@@ -39,7 +55,8 @@ public class PetController : MonoBehaviour
         {
             ChangeFood(-foodTickRate);
             ChangeHappiness(-happinessTickRate);
-            ChangeEnergy(-energyTickRate);
+            ChangeDrink(-drinkTickRate);
+            PetUIController.instance.UpdateImages(food, happiness, drink);
         }
     } 
     public void ChangeFood(int amount)
@@ -72,18 +89,18 @@ public class PetController : MonoBehaviour
         else if (happiness > 100) happiness = 100;
     }
 
-    public void ChangeEnergy(int amount)
+    public void ChangeDrink(int amount)
     {
-        energy += amount;
-        if (energy > 0)
+        drink += amount;
+        if (drink > 0)
         {
-            lastTimeEnergized = DateTime.Now;
+            lastTimeDrinked = DateTime.Now;
         }
 
-        if (energy < 0)
+        if (drink < 0)
         {
-            PetManager.PetDeathEnergy();
+            PetManager.PetDeathThirst();
         }
-        else if (energy > 100) energy = 100;
+        else if (drink > 100) drink = 100;
     }
 }

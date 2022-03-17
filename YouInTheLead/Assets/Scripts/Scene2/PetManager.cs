@@ -16,9 +16,9 @@ public class PetManager : MonoBehaviour
         Debug.Log("Pet commited suicide");
     }
 
-    public static void PetDeathEnergy()
+    public static void PetDeathThirst()
     {
-        Debug.Log("Pet fell to the ground and died");
+        Debug.Log("Pet driedd out");
     }
 
 }

@@ -23,14 +23,14 @@ public class DatabaseManager : MonoBehaviour
     private void Start()
     {
         Pet pet = LoadPet();
-        if(pet != null) Debug.Log(LoadPet().energy);
+        if(pet != null) Debug.Log(LoadPet().drink);
     }
 
     private void Update()
     {
         if(TimeManager.gameHourTimer < 0)
         {
-            Pet pet = new Pet(petController.lastTimeFed, petController.lastTimeHappy, petController.lastTimeEnergized, petController.food, petController.happiness, petController.energy);
+            Pet pet = new Pet(petController.lastTimeFed, petController.lastTimeHappy, petController.lastTimeDrinked, petController.food, petController.happiness, petController.drink);
             SavePet(pet);
         }
     }
