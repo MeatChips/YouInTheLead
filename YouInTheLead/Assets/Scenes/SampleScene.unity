@@ -416,10 +416,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   notificationText: {fileID: 812764744}
-  time: 14::00
   timer: 5
-  x: 20
-  y: 20
 --- !u!4 &1004141715
 Transform:
   m_ObjectHideFlags: 0
@@ -615,7 +612,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 399.45, y: 156.04}
+  m_AnchoredPosition: {x: 360, y: 156.04}
   m_SizeDelta: {x: 315.11, y: 134.92}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1922268038
