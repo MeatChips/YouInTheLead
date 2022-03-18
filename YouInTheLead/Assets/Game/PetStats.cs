@@ -21,11 +21,6 @@ public class PetStats : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //if (notificationScript.elapsed >= notificationScript.timerSpeed)
-        //{
-        //    TakeDamage(1);
-        //}
-
         if (notificationScript.elapsed == 0)
         {
             TakeDamage(1);
