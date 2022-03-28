@@ -15,8 +15,8 @@ public class Notification : MonoBehaviour
     public Text notificationButtonText;
     public Button notificationButton;
 
-    public float notificationTextWrite;
-    public float notificationButtonTextWrite;
+    public string notificationTextWrite;
+    public string notificationButtonTextWrite;
 
     void Start()
     {

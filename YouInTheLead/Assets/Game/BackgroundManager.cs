@@ -6,11 +6,11 @@ using UnityEngine.UI;
 public class BackgroundManager : MonoBehaviour
 {
     public SpriteRenderer spriteRenderer;
-    public Sprite newBackgroundSprite0;
-    public Sprite newBackgroundSprite1;
-    public Sprite newBackgroundSprite2;
-    public Sprite newBackgroundSprite3;
-    public Sprite newBackgroundSprite4;
+    public Sprite newBackgroundSprite_100HP;
+    public Sprite newBackgroundSprite_75HP;
+    public Sprite newBackgroundSprite_50HP;
+    public Sprite newBackgroundSprite_25HP;
+    public Sprite newBackgroundSprite_0HP;
 
     public PetStats PetStatsScript;
 
@@ -19,27 +19,27 @@ public class BackgroundManager : MonoBehaviour
     {
         if (PetStatsScript.currentHealth == 100)
         {
-            spriteRenderer.sprite = newBackgroundSprite0;
+            spriteRenderer.sprite = newBackgroundSprite_100HP;
         }
 
         if (PetStatsScript.currentHealth == 75)
         {
-            spriteRenderer.sprite = newBackgroundSprite1;
+            spriteRenderer.sprite = newBackgroundSprite_75HP;
         }
 
         if (PetStatsScript.currentHealth == 50)
         {
-            spriteRenderer.sprite = newBackgroundSprite2;
+            spriteRenderer.sprite = newBackgroundSprite_50HP;
         }
 
         if (PetStatsScript.currentHealth == 25)
         {
-            spriteRenderer.sprite = newBackgroundSprite3;
+            spriteRenderer.sprite = newBackgroundSprite_25HP;
         }
 
         if (PetStatsScript.currentHealth == 0)
         {
-            spriteRenderer.sprite = newBackgroundSprite4;
+            spriteRenderer.sprite = newBackgroundSprite_0HP;
         }
     }
 }
