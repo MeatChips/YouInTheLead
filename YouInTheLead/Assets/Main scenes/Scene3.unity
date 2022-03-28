@@ -799,11 +799,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 535012151}
-  newBackgroundSprite0: {fileID: 21300000, guid: d36254c9a60a5334b82b4f34062f7735, type: 3}
-  newBackgroundSprite1: {fileID: 21300000, guid: 803819ddfaa7f1f48afef1c1cc93b825, type: 3}
-  newBackgroundSprite2: {fileID: 21300000, guid: 0a9245371551a0847a5575c442aec12e, type: 3}
-  newBackgroundSprite3: {fileID: 21300000, guid: 2d50d06a906fcd84aae09d12afde1751, type: 3}
-  newBackgroundSprite4: {fileID: 21300000, guid: f8595d29ab919d34dbc63ac48da64b6b, type: 3}
+  newBackgroundSprite_100HP: {fileID: 21300000, guid: d36254c9a60a5334b82b4f34062f7735, type: 3}
+  newBackgroundSprite_75HP: {fileID: 21300000, guid: 803819ddfaa7f1f48afef1c1cc93b825, type: 3}
+  newBackgroundSprite_50HP: {fileID: 21300000, guid: 0a9245371551a0847a5575c442aec12e, type: 3}
+  newBackgroundSprite_25HP: {fileID: 21300000, guid: 2d50d06a906fcd84aae09d12afde1751, type: 3}
+  newBackgroundSprite_0HP: {fileID: 21300000, guid: f8595d29ab919d34dbc63ac48da64b6b, type: 3}
   PetStatsScript: {fileID: 1565278828251607369}
 --- !u!212 &535012151
 SpriteRenderer:
@@ -892,7 +892,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -400, y: 215}
+  m_AnchoredPosition: {x: -380, y: 215}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &564715894
@@ -1081,8 +1081,8 @@ MonoBehaviour:
   elapsed: 0
   notificationButtonText: {fileID: 1870680420}
   notificationButton: {fileID: 1451562204}
-  notificationTextWrite: 0
-  notificationButtonTextWrite: 0
+  notificationTextWrite: 
+  notificationButtonTextWrite: 
 --- !u!1 &689188820
 GameObject:
   m_ObjectHideFlags: 0
