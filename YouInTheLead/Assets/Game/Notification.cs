@@ -12,6 +12,23 @@ public class Notification : MonoBehaviour
 
     public float elapsed;
 
+    public Text notificationButtonText;
+    public Button notificationButton;
+
+    public float notificationTextWrite;
+    public float notificationButtonTextWrite;
+
+    void Start()
+    {
+        Button btn = notificationButton.GetComponent<Button>();
+        btn.onClick.AddListener(TaskOnClick);
+    }
+
+    void TaskOnClick()
+    {
+        Debug.Log("You have clicked the button!");
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -25,13 +42,15 @@ public class Notification : MonoBehaviour
 
     public void NotificationGo()
     {
-        StartCoroutine(sendNotification("Notification!!", 10));
+        StartCoroutine(sendNotification("Notification!!", "CLICK HERE", 10));
     }
 
-    IEnumerator sendNotification(string text, int time)
+    IEnumerator sendNotification(string text, string text1, int time)
     {
         notificationText.text = text;
+        notificationButtonText.text = text1;
         yield return new WaitForSeconds(time);
         notificationText.text = "";
+        notificationButtonText.text = "";
     }
 }

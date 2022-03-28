@@ -1079,6 +1079,10 @@ MonoBehaviour:
   timerSpeed: 15
   notificationText: {fileID: 918566925}
   elapsed: 0
+  notificationButtonText: {fileID: 1870680420}
+  notificationButton: {fileID: 1451562204}
+  notificationTextWrite: 0
+  notificationButtonTextWrite: 0
 --- !u!1 &689188820
 GameObject:
   m_ObjectHideFlags: 0
@@ -1732,7 +1736,7 @@ GameObject:
   - component: {fileID: 1870680421}
   - component: {fileID: 1870680420}
   m_Layer: 5
-  m_Name: Text
+  m_Name: ButtonText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1790,7 +1794,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Button
+  m_Text: 
 --- !u!222 &1870680421
 CanvasRenderer:
   m_ObjectHideFlags: 0
