@@ -23,7 +23,7 @@ public class PetStats : MonoBehaviour
     {
         if (notificationScript.elapsed == 0)
         {
-            TakeDamage(1);
+            TakeDamage(5);
         }
     }
 

@@ -21,7 +21,6 @@ public class Notification : MonoBehaviour
             elapsed = 0f;
             NotificationGo();
         }
-
     }
 
     public void NotificationGo()
