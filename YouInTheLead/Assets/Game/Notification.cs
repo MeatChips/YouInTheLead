@@ -6,15 +6,20 @@ using UnityEngine.UI;
 public class Notification : MonoBehaviour
 {
     [SerializeField]
+    [Header("TIMERS")]
     public float timerSpeed;
 
+    [Header("TEXT")]
     public Text notificationText;
+    public Text notificationButtonText;
 
+    [Header("ELAPSED")]
     public float elapsed;
 
-    public Text notificationButtonText;
+    [Header("BUTTONS")]
     public Button notificationButton;
 
+    [Header("WRITABLE BUTTONS")]
     public string notificationTextWrite;
     public string notificationButtonTextWrite;
 

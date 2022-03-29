@@ -5,13 +5,17 @@ using UnityEngine.UI;
 
 public class BackgroundManager : MonoBehaviour
 {
+    [Header("SPRITERENDERER")]
     public SpriteRenderer spriteRenderer;
+
+    [Header("BACKGROUND SPRITES")]
     public Sprite newBackgroundSprite_100HP;
     public Sprite newBackgroundSprite_75HP;
     public Sprite newBackgroundSprite_50HP;
     public Sprite newBackgroundSprite_25HP;
     public Sprite newBackgroundSprite_0HP;
 
+    [Header("OTHER SCRIPTS")]
     public PetStats PetStatsScript;
 
     // Update is called once per frame

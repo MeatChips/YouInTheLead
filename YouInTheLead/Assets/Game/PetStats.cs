@@ -5,15 +5,21 @@ using UnityEngine.UI;
 
 public class PetStats : MonoBehaviour
 {
+    [Header("HEALTH")]
     public int maxHealth = 100;
     public int currentHealth;
 
-    public int regenerationHealth = 5;
+    [Header("REGENERATION")]
+    public int regenerationNotificationHealth = 5;
+    public int regenerationEatHealth = 2;
 
+    [Header("OTHER SCRIPTS")]
     public Healthbar healthbar;
     public Notification notificationScript;
 
+    [Header("BUTTONS")]
     public Button notificationButton;
+    public Button eatButton;
 
     // Start is called before the first frame update
     void Start()
@@ -23,6 +29,9 @@ public class PetStats : MonoBehaviour
 
         Button btn = notificationButton.GetComponent<Button>();
         btn.onClick.AddListener(HealHP);
+
+        Button btn2 = eatButton.GetComponent<Button>();
+        btn2.onClick.AddListener(PetEat);
     }
 
     // Update is called once per frame
@@ -34,9 +43,17 @@ public class PetStats : MonoBehaviour
         }
     }
 
+    void PetEat()
+    {
+        currentHealth += regenerationEatHealth;
+        healthbar.SetHealth(currentHealth);
+
+        Debug.Log("Pet has been brushed, pet is happy");
+    }
+
     void HealHP()
     {
-        currentHealth += regenerationHealth;
+        currentHealth += regenerationNotificationHealth;
         healthbar.SetHealth(currentHealth);
 
         Debug.Log("Your pet has been healed a bit!");

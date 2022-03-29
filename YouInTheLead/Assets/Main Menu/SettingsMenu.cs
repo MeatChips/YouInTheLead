@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class SettingsMenu : MonoBehaviour
 {
+    [Header("DROPDOWNS")]
     public Dropdown resolutionDropdown;
 
     Resolution[] resolutions;

@@ -6,9 +6,16 @@ using UnityEditor;
 
 public class SkinManager : MonoBehaviour
 {
+    [Header("SPRITERENDERER")]
     public SpriteRenderer sr;
+
+    [Header("LISTS")]
     public List<Sprite> skins = new List<Sprite>();
+
+    [Header("SKINS")]
     private int selectedSkin = 0;
+
+    [Header("PLAYERSKIN -> PREFABS")]
     public GameObject playerskin;
 
     public void NextOption()
