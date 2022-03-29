@@ -8,14 +8,21 @@ public class PetStats : MonoBehaviour
     public int maxHealth = 100;
     public int currentHealth;
 
+    public int regenerationHealth = 5;
+
     public Healthbar healthbar;
     public Notification notificationScript;
+
+    public Button notificationButton;
 
     // Start is called before the first frame update
     void Start()
     {
         currentHealth = maxHealth;
         healthbar.SetMaxHealth(maxHealth);
+
+        Button btn = notificationButton.GetComponent<Button>();
+        btn.onClick.AddListener(HealHP);
     }
 
     // Update is called once per frame
@@ -25,6 +32,14 @@ public class PetStats : MonoBehaviour
         {
             TakeDamage(5);
         }
+    }
+
+    void HealHP()
+    {
+        currentHealth += regenerationHealth;
+        healthbar.SetHealth(currentHealth);
+
+        Debug.Log("Your pet has been healed a bit!");
     }
 
     void TakeDamage(int damage)

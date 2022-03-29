@@ -239,8 +239,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 200, y: 100}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: 120, y: 100}
+  m_SizeDelta: {x: 75, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &225990068
 MonoBehaviour:
@@ -1081,8 +1081,8 @@ MonoBehaviour:
   elapsed: 0
   notificationButtonText: {fileID: 1870680420}
   notificationButton: {fileID: 1451562204}
-  notificationTextWrite: 
-  notificationButtonTextWrite: 
+  notificationTextWrite: Notificatie!
+  notificationButtonTextWrite: Gelezen
 --- !u!1 &689188820
 GameObject:
   m_ObjectHideFlags: 0
@@ -1470,7 +1470,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Enter text...
+  m_Text: Naam van huisdier...
 --- !u!222 &938765193
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1839,6 +1839,10 @@ PrefabInstance:
       propertyPath: healthbar
       value: 
       objectReference: {fileID: 564715895}
+    - target: {fileID: 1565278828155411142, guid: a9a1f0e67121cdf4494b09d241465609, type: 3}
+      propertyPath: notificationButton
+      value: 
+      objectReference: {fileID: 1451562204}
     - target: {fileID: 1565278828155411142, guid: a9a1f0e67121cdf4494b09d241465609, type: 3}
       propertyPath: notificationScript
       value: 
