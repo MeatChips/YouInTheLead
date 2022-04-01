@@ -1078,8 +1078,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timerSpeed: 15
   notificationText: {fileID: 918566925}
-  elapsed: 0
   notificationButtonText: {fileID: 1870680420}
+  elapsed: 0
   notificationButton: {fileID: 1451562204}
   notificationTextWrite: Notificatie!
   notificationButtonTextWrite: Gelezen
@@ -1835,6 +1835,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 1565278828155411142, guid: a9a1f0e67121cdf4494b09d241465609, type: 3}
+      propertyPath: eatButton
+      value: 
+      objectReference: {fileID: 432495362}
     - target: {fileID: 1565278828155411142, guid: a9a1f0e67121cdf4494b09d241465609, type: 3}
       propertyPath: healthbar
       value: 

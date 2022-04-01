@@ -45,18 +45,36 @@ public class PetStats : MonoBehaviour
 
     void PetEat()
     {
-        currentHealth += regenerationEatHealth;
-        healthbar.SetHealth(currentHealth);
+        if (currentHealth == maxHealth)
+        {
+            regenerationEatHealth = 0;
 
-        Debug.Log("Pet has been brushed, pet is happy");
+            Debug.Log("The pet doesn't want to be pet anymore.");
+        }
+        else
+        {
+            currentHealth += regenerationEatHealth;
+            healthbar.SetHealth(currentHealth);
+
+            Debug.Log("Pet has been brushed, pet is happy.");
+        }
     }
 
     void HealHP()
     {
-        currentHealth += regenerationNotificationHealth;
-        healthbar.SetHealth(currentHealth);
+        if (currentHealth == maxHealth)
+        {
+            regenerationNotificationHealth = 0;
 
-        Debug.Log("Your pet has been healed a bit!");
+            Debug.Log("You've clicked enough notifications.");
+        }
+        else
+        {
+            currentHealth += regenerationNotificationHealth;
+            healthbar.SetHealth(currentHealth);
+
+            Debug.Log("Your pet has been healed a bit!");
+        }
     }
 
     void TakeDamage(int damage)
