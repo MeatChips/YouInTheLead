@@ -95,6 +95,8 @@ public class Calendar : MonoBehaviour
         int startDay = GetMonthStartDay(year, month);
         int endDay = GetTotalNumberOfDays(year, month);
 
+        Color colorWhite = Color.white;
+        Color colorGrey = Color.grey;
 
         ///Create the days
         ///This only happens for our first Update Calendar when we have no Day objects therefore we must create them
@@ -109,11 +111,11 @@ public class Calendar : MonoBehaviour
                     int currDay = (w * 7) + i;
                     if (currDay < startDay || currDay - startDay >= endDay)
                     {
-                        newDay = new Day(currDay - startDay, Color.grey, weeks[w].GetChild(i).gameObject);
+                        newDay = new Day(currDay - startDay, colorWhite, weeks[w].GetChild(i).gameObject);
                     }
                     else
                     {
-                        newDay = new Day(currDay - startDay, Color.white, weeks[w].GetChild(i).gameObject);
+                        newDay = new Day(currDay - startDay, colorWhite, weeks[w].GetChild(i).gameObject);
                     }
                     days.Add(newDay);
                 }
@@ -127,11 +129,11 @@ public class Calendar : MonoBehaviour
             {
                 if (i < startDay || i - startDay >= endDay)
                 {
-                    days[i].UpdateColor(Color.grey);
+                    days[i].UpdateColor(colorGrey);
                 }
                 else
                 {
-                    days[i].UpdateColor(Color.white);
+                    days[i].UpdateColor(colorWhite);
                 }
 
                 days[i].UpdateDay(i - startDay);
