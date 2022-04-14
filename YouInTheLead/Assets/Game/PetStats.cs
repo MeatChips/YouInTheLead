@@ -43,20 +43,20 @@ public class PetStats : MonoBehaviour
         }
     }
 
-    void PetEat()
+    public void PetEat()
     {
         if (currentHealth == maxHealth)
         {
             regenerationEatHealth = 0;
 
-            Debug.Log("The pet doesn't want to be pet anymore.");
+            Debug.Log("The pet's stomach is full.");
         }
         else
         {
             currentHealth += regenerationEatHealth;
             healthbar.SetHealth(currentHealth);
 
-            Debug.Log("Pet has been brushed, pet is happy.");
+            Debug.Log("Pet has been given food. Pet is happy.");
         }
     }
 
