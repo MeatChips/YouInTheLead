@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEditor;
 
+
 public class SkinManager : MonoBehaviour
 {
     [Header("SPRITERENDERER")]
@@ -15,13 +16,17 @@ public class SkinManager : MonoBehaviour
     [Header("SKINS")]
     private int selectedSkin = 0;
 
+    [Header("TEXTURES")]
+    public Texture2D playerPNG1;
+    public Texture2D playerPNG2;
+
     [Header("PLAYERSKIN -> PREFABS")]
     public GameObject playerskin;
 
     public void NextOption()
     {
         selectedSkin = selectedSkin + 1;
-        if(selectedSkin == skins.Count)
+        if (selectedSkin == skins.Count)
         {
             selectedSkin = 0;
         }
@@ -40,6 +45,7 @@ public class SkinManager : MonoBehaviour
 
     public void PlayGame()
     {
+        DontDestroyOnLoad(playerskin);
         PrefabUtility.SaveAsPrefabAsset(playerskin, "Assets/Sprites/selectedskin.prefab");
         SceneManager.LoadScene("Scene3");
     }

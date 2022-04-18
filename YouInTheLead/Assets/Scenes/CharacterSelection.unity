@@ -503,6 +503,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 544017413}
   m_CullTransparentMesh: 1
+--- !u!1 &607800040 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2533196642769160292, guid: c4209441af9de5d47b4fd13aff5f9e4c, type: 3}
+  m_PrefabInstance: {fileID: 1255031559890998311}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &787383046
 GameObject:
   m_ObjectHideFlags: 0
@@ -715,11 +720,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 890023020}
   m_CullTransparentMesh: 1
---- !u!1 &901536416 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2533196642769160292, guid: c4209441af9de5d47b4fd13aff5f9e4c, type: 3}
-  m_PrefabInstance: {fileID: 1255031559890998311}
-  m_PrefabAsset: {fileID: 0}
 --- !u!212 &901536417 stripped
 SpriteRenderer:
   m_CorrespondingSourceObject: {fileID: 2955802816395462316, guid: c4209441af9de5d47b4fd13aff5f9e4c, type: 3}
@@ -855,7 +855,9 @@ MonoBehaviour:
   skins:
   - {fileID: -8603789238770071204, guid: fe96a380349e67e43a294a4eda63315c, type: 3}
   - {fileID: 1222135119261053109, guid: fe96a380349e67e43a294a4eda63315c, type: 3}
-  playerskin: {fileID: 901536416}
+  playerPNG1: {fileID: 2800000, guid: ef919aa1464da9f4f966a361ea652df2, type: 3}
+  playerPNG2: {fileID: 2800000, guid: 964522b8a2f51174d935c0feb06efa0c, type: 3}
+  playerskin: {fileID: 607800040}
 --- !u!1 &1422887561
 GameObject:
   m_ObjectHideFlags: 0
