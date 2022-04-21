@@ -72,23 +72,23 @@ public class PetStats : MonoBehaviour
         }
 
         // Kid
-        if (seconds > 60)
+        if (seconds > 25)
         {
             spriteRenderer.sprite = kid_pet;
         }
 
-        if (currentHealth == 50 && seconds > 60)
+        if (currentHealth == 50 && seconds > 25)
         {
             spriteRenderer.sprite = kid_pet_sick_50hp;
         }
 
         // Adult
-        if (seconds > 120)
+        if (seconds > 50)
         {
             spriteRenderer.sprite = adult_pet;
         }
 
-        if (currentHealth == 50 && seconds > 120)
+        if (currentHealth == 50 && seconds > 50)
         {
             spriteRenderer.sprite = adult_pet_sick_50hp;
         }
