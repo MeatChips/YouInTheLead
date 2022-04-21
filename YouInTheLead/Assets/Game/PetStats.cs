@@ -21,6 +21,23 @@ public class PetStats : MonoBehaviour
     public Button notificationButton;
     public Button eatButton;
 
+    [Header("SPRITES")]
+    public Sprite baby_pet_sick_50hp;
+    public Sprite kid_pet_sick_50hp;
+    public Sprite adult_pet_sick_50hp;
+
+    public Sprite baby_pet;
+    public Sprite kid_pet;
+    public Sprite adult_pet;
+
+    [Header("SPRITERENDERER")]
+    public SpriteRenderer spriteRenderer;
+
+    [Header("TIMERS")]
+    public float timer = 0.0f;
+    public int seconds;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -37,9 +54,43 @@ public class PetStats : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // seconds in float
+        timer += Time.deltaTime;
+        // turn seconds in float to int
+        seconds = (int)(timer % 60);
+        print(seconds);
+
         if (notificationScript.elapsed == 0)
         {
             TakeDamage(5);
+        }
+
+        // Baby
+        if (currentHealth == 50)
+        {
+            spriteRenderer.sprite = baby_pet_sick_50hp;
+        }
+
+        // Kid
+        if (seconds > 60)
+        {
+            spriteRenderer.sprite = kid_pet;
+        }
+
+        if (currentHealth == 50 && seconds > 60)
+        {
+            spriteRenderer.sprite = kid_pet_sick_50hp;
+        }
+
+        // Adult
+        if (seconds > 120)
+        {
+            spriteRenderer.sprite = adult_pet;
+        }
+
+        if (currentHealth == 50 && seconds > 120)
+        {
+            spriteRenderer.sprite = adult_pet_sick_50hp;
         }
     }
 

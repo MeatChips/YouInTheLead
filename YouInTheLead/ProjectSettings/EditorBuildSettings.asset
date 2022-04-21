@@ -12,12 +12,12 @@ EditorBuildSettings:
     path: Assets/Scenes/Settings.unity
     guid: f1e6c8c571f08a14b871d750efa80662
   - enabled: 1
-    path: Assets/Scenes/CharSelect.unity
-    guid: 2cc15be2bbbe4ab4bbce265085265046
-  - enabled: 1
-    path: Assets/Scenes/CharacterSelection.unity
-    guid: d79b9fd2236ea714aacd136811cf2ccd
+    path: Assets/Scenes/PetSelection.unity
+    guid: 5919f8bba3c3b524a84636e186f8072a
   - enabled: 1
     path: Assets/Scenes/Scene3.unity
     guid: 5d8bdde1247260f44bdbaaf541aa9e31
+  - enabled: 1
+    path: Assets/Scenes/Scene4.unity
+    guid: 06825e46d1d2a7c43b70e7183f43ebea
   m_configObjects: {}
