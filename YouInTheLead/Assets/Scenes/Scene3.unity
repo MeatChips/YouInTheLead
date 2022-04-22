@@ -3075,7 +3075,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &535012150
 MonoBehaviour:
@@ -5092,7 +5092,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 4.8
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -11691,7 +11691,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 171754604895509158, guid: 5eefa13255fc79741ad3bb2adc9a6ac4, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 171754604895509158, guid: 5eefa13255fc79741ad3bb2adc9a6ac4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -11699,7 +11699,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 171754604895509158, guid: 5eefa13255fc79741ad3bb2adc9a6ac4, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.5
+      value: -1.25
       objectReference: {fileID: 0}
     - target: {fileID: 171754604895509158, guid: 5eefa13255fc79741ad3bb2adc9a6ac4, type: 3}
       propertyPath: m_LocalPosition.z
