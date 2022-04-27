@@ -58,7 +58,6 @@ public class PetStats : MonoBehaviour
         timer += Time.deltaTime;
         // turn seconds in float to int
         seconds = (int)(timer % 60);
-        print(seconds);
 
         if (notificationScript.elapsed == 0)
         {
