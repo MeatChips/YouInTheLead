@@ -23,6 +23,9 @@ public class Notification : MonoBehaviour
     public string notificationTextWrite;
     public string notificationButtonTextWrite;
 
+    [Header("STRINGS")]
+    private string input;
+
     void Start()
     {
         Button btn = notificationButton.GetComponent<Button>();
@@ -44,15 +47,21 @@ public class Notification : MonoBehaviour
             NotificationGo();
         }
     }
+    public void ReadStringInput(string s)
+    {
+        input = s;
+        Debug.Log(input);
+    }
 
     public void NotificationGo()
     {
-        StartCoroutine(sendNotification("Notification!!", "CLICK HERE", 10));
+        StartCoroutine(sendNotification(input, "CLICK HERE", 10));
     }
 
-    IEnumerator sendNotification(string text, string text1, int time)
+    IEnumerator sendNotification(string s, string text1, int time)
     {
-        notificationText.text = text;
+        input = s;
+        notificationText.text = input;
         notificationButtonText.text = text1;
         yield return new WaitForSeconds(time);
         notificationText.text = "";
